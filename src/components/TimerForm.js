@@ -8,12 +8,7 @@ class TimerForm extends Component {
           <input type="text" className="form-control" placeholder="What are you working on?" />
         </div>
         <div className="col">
-          <select class="custom-select" id="projectSelect">
-            <option selected>Select a project...</option>
-            <option value="project1">Project 1</option>
-            <option value="project2">Project 2</option>
-            <option value="project3">Project 3</option>
-          </select>
+          <input type="text" className="form-control" placeholder="What is the project?" />
         </div>
         <div className="col-auto">
         <button type="submit" class="btn btn-success">Add Entry <i class="far fa-clock"></i></button>
