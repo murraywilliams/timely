@@ -16,7 +16,7 @@ class TimerForm extends Component {
           </select>
         </div>
         <div className="col-auto">
-        <button type="submit" class="btn btn-success mb-2">Add Entry</button>
+        <button type="submit" class="btn btn-success">Add Entry <i class="far fa-clock"></i></button>
         </div>
       </div>
     )
