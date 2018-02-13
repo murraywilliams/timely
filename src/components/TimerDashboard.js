@@ -5,12 +5,30 @@ import TimerForm from './TimerForm';
 import TimerList from './TimerList';
 
 class TimerDashboard extends Component {
+
+  state = {
+    timers: ''
+  }
+
+  addNewTimer = (timer) => {
+    console.log(timer);
+    let description = timer.description;
+    let project = timer.project;
+    let id = timer.id;
+    if (timer) {
+      this.setState({
+        timers: this.state.timers.concat({id, description, project})
+      });
+    }
+  }
+
   render() {
+    console.log(this.state.timers)
     return (
       <div className="container-fluid">
-        <TimerForm />
+        <TimerForm addTimer={this.addNewTimer}/>
         <br/>
-        <TimerList />
+        <TimerList timers={this.state.timers}/>
       </div>
     )
   }
